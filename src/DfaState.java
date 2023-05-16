@@ -1,22 +1,21 @@
 import java.util.HashMap;
 
-public class State {
+public class DfaState {
     String name;
     boolean isAccepted;
 
-    char[] alphabet;
+    char[] alphabet = {'0', '1'};
 
-    HashMap<Character, State> nextStates;
+    HashMap<Character, DfaState> nextStates;
 
-    public State(String name, boolean isAccepted, char[] alphabet) {
+    public DfaState(String name, boolean isAccepted) {
         this.name = name;
         this.isAccepted = isAccepted;
-        this.alphabet = alphabet;
     }
 
-    public void addNextStates(State[] states) throws Exception {
+    public void addNextStates(DfaState[] states) throws Exception {
 
-        this.nextStates = new HashMap<Character, State>();
+        this.nextStates = new HashMap<Character, DfaState>();
 
         if(states.length != alphabet.length)
             throw new Exception("Length Mismatch !");

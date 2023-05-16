@@ -1,21 +1,11 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        System.out.print("Question 1\n");
+        System.out.print("DFA Simulator\n");
 
-        Scanner input = new Scanner(System.in);
+        DFASimulator.main(args);
 
-//        System.out.print("Enter the input string: ");
-//        String inputString = input.nextLine();
-//
-//        DFASimulator.question_1(inputString);
+        System.out.print("\nPalidrome PDA\n");
 
-        System.out.print("Question 2\n");
-
-        System.out.print("Enter the input string: ");
-        String inputString2 = input.nextLine();
-
-        DFASimulator.question_2(inputString2);
+        PalindromePDA.main(args);
     }
 }
